@@ -1,13 +1,3 @@
-# Test Case
-# -----------------------
-# 1. Open web browser
-# 2. Open URL - https://opensource-demo.orangehrmlive.com/
-# 3. Provide Email - Admin
-# 4. Provide Password - admin123
-# 5. Click on login
-# 6. Capture title of the dashboard page
-# 7. Verify title of the page
-# 8. Close browser
 import time
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -18,6 +8,9 @@ serv_obj = Service("C:\SeleniumWebDrivers\Google Chrome(32bit)\chromedriver.exe"
 driver = webdriver.Chrome(service=serv_obj)
 
 driver.get("https://opensource-demo.orangehrmlive.com/")
+
+# driver.implicitly_wait(5) #implicitly wait is applicable for all the elements in the page
+
 
 driver.maximize_window()
 time.sleep(1.0)
@@ -37,17 +30,3 @@ else:
     print("Login Test Failed")
 
 driver.close()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
