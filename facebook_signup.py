@@ -4,10 +4,9 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 
-serv_obj = Service("C:\SeleniumWebDrivers\Google Chrome(32bit)\chromedriver.exe")
-# driver=webdriver.Chrome() #don't have to give the executeable path if we use this, but we have to copy the drivers in python location "Script" Folder
-driver = webdriver.Chrome(service=serv_obj)
+driver = webdriver.Chrome()
 
+driver.maximize_window()
 driver.get("https://www.facebook.com/")
 
 # driver.implicitly_wait(5) #implicitly wait is applicable for all the elements in the page
@@ -54,13 +53,3 @@ else:
     print("Login Test Failed")
 
 driver.close()
-
-
-
-
-
-
-
-
-
-
